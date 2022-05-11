@@ -16,5 +16,9 @@
 // Import commands.ts using ES2015 syntax:
 import './commands'
 
+beforeEach(function(){
+    cy.visit(Cypress.env('baseUrl')).get('.commentLabel').should('have.text','Use your domain username and password');
+})
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
